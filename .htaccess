@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILE_NAME} !-d
+RewriteCond %{REQUEST_FILE_NAME} !-f
+
+RewriteCond %{REQUEST_FILE_NAME} !assets/.(css|js|jpg|jpeg|png)$
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,l]

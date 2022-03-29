@@ -1,0 +1,3 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" title="plus" class="button__icon button__icon--small" width="14"  height="14" ><defs><symbol viewBox="3 3 10 10" id="plus" xmlns="http://www.w3.org/2000/svg"><path d="M7.36 2.88v4.48H2.88v1.28h4.48v4.48h1.28V8.64h4.48V7.36H8.64V2.88z"></path></symbol></defs>
+<use xlink:href="#plus" fill="#FFFFFF"></use>
+</svg>
