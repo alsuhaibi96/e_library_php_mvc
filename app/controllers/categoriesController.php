@@ -21,7 +21,7 @@ function show(){
 
 
     /**
-     * Show method that return the view 
+     * Show method that return the view data
      */
     function listAll(){
         $categories=new Category();

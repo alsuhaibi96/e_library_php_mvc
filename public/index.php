@@ -3,6 +3,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use coding\app\controllers\AuthorsController;
 use coding\app\controllers\CategoriesController;
+use coding\app\controllers\BooksController;
 use coding\app\controllers\PublishersController;
 use coding\app\system\AppSystem;
 use coding\app\system\Router;
@@ -11,6 +12,7 @@ use coding\app\controllers\DashboardController;
 use coding\app\controllers\HomeController;
 use coding\app\controllers\CartController;
 use coding\app\controllers\PaymentController;
+
 
 use Dotenv\Dotenv;
 
@@ -45,6 +47,8 @@ Router::get('/payment',[PaymentController::class,'show']);
  */
 Router::get('/',[HomeController::class,'show']);
 Router::get('/dashboard',[DashboardController::class,'show']);
+Router::get('/add_book',[BooksController::class,'show']);
+Router::get('/list_books',[BooksController::class,'listAll']);
 Router::get('/categories_list',[CategoriesController::class,'listAll']);
 Router::get('/show_authors',[AuthorsController::class,'show']);
 
@@ -59,8 +63,8 @@ Router::get('/add_category',[CategoriesController::class,'create']);
 
 
 
-/** web add routes  */
-
+/** web post (add and save) routes  */
+Router::post('/save_book',[BooksController::class,'store']);
 Router::post('/save_author',[AuthorsController::class,'store']);
 Router::get('/edit_category/{id}',[CategoriesController::class,'edit']);
 Router::get('/remove_category',[CategoriesController::class,'remove']);

@@ -619,17 +619,17 @@
       <div class="card-body">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-          <form action="" method="post" enctype="multipart/form-data">
+          <form action="/save_book" method="post" enctype="multipart/form-data">
            
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label" for="Title">الاسم</label>
-                <input type="text" id="Title" class="form-control" placeholder="" />
+                <input name="title" type="text" id="Title" class="form-control" placeholder="اسم الكتاب" />
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="email">الصورة</label>
                 <div class="input-group input-group-merge">
-                  <input class="form-control" type="file" id=" " name="email" placeholder="john.doe" aria-label="john.doe" aria-describedby="email3" />
+                  <input name="image" class="form-control" type="file" id=""  placeholder="صورة الكتاب" aria-label="john.doe" aria-describedby="email3" />
                   <span class="input-group-text" id="email3"> </span>
                 </div>
               </div>
@@ -641,11 +641,11 @@
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="alt-num">السعر</label>
-                <input type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
+                <input name="price"  type="number" id="alt-num" class="form-control phone-mask" placeholder="سعر الكتاب" />
               </div>
               <div class="col-12">
                 <label class="form-label" for="address">الوصف</label>
-                <textarea name="address" class="form-control" id="address" rows="2" placeholder=""></textarea>
+                <textarea name="description" class="form-control" id="address" rows="2" placeholder="الوصف"></textarea>
               </div>
               
               <div class="col-md-6">
@@ -663,17 +663,34 @@
               
               <div class="col-md-6">
                 <label class="form-label" for="alt-num">عدد الصفحات </label>
-                <input type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
+                <input name="pages_number" type="number" id="alt-num" class="form-control phone-mask" placeholder=" ادخل عدد الصفحات مثلا 188" />
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="landmark">الصيغة</label>
-                <input type="text" id="landmark" class="form-control" placeholder="" />
+                <input name="format" type="text" id="landmark" class="form-control" placeholder="PDF , نسخة ورقية وغيرها" />
               </div>
              
               <div class="col-md-6">
                 <label class="form-label" for="pincode">الكمية</label>
-                <input type="text" id="pincode" class="form-control" placeholder="" />
+                <input name="quantity" type="number" id="pincode" class="form-control" placeholder="مثلا 100 كتاب" />
               </div>
+              <div class="col-md-6">
+        <div class="form-password-toggle">
+          <label class="form-label" for="multicol-confirm-password">تفعيل القسم</label>
+          <div class="input-group input-group-merge">
+          <label class="switch">
+              <input name="is_active" value=1 type="checkbox" checked class="switch-input" />
+              <span class="switch-toggle-slider">
+                <span class="switch-on"></span>
+                <span class="switch-off"></span>
+              </span>
+              <span class="switch-label">مفعًل </span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    
            
           </div>
           <div style="margin-top:20px; margin-left:auto;" class="col-12">
