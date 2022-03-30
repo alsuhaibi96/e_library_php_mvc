@@ -27,28 +27,45 @@ $config=array(
 $system=new AppSystem($config);
 
 
+
+
 /** Show routes  */
-Router::get('/newUser',[UsersController::class,'newUser']);
 Router::get('/cart',[CartController::class,'show']);
-Router::get('/dashboard',[DashboardController::class,'show']);
-Router::get('/',[HomeController::class,'show']);
 Router::get('/categories',[CategoriesController::class,'show']);
 Router::get('/payment',[PaymentController::class,'show']);
 
 
 
+/**
+ * Dashboard operations
+ */
 
-
-
-
-/** web routes  */
-
-
+/**
+ * show dashboard views
+ */
+Router::get('/',[HomeController::class,'show']);
+Router::get('/dashboard',[DashboardController::class,'show']);
 Router::get('/categories_list',[CategoriesController::class,'listAll']);
+Router::get('/show_authors',[AuthorsController::class,'show']);
+
+
+
+/** Add dashboard values to views
+ * 
+ */
+Router::get('/newUser',[UsersController::class,'newUser']);
+Router::get('/add_author',[AuthorsController::class,'show_author']);
 Router::get('/add_category',[CategoriesController::class,'create']);
+
+
+
+/** web add routes  */
+
+Router::post('/save_author',[AuthorsController::class,'store']);
 Router::get('/edit_category/{id}',[CategoriesController::class,'edit']);
 Router::get('/remove_category',[CategoriesController::class,'remove']);
 Router::post('/save_category',[CategoriesController::class,'store']);
+Router::post('/save_user',[UsersController::class,'saveUser']);
 Router::post('/update_category',[CategoriesController::class,'update']);
 
 /** end of web routes */

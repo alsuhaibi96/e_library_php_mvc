@@ -146,6 +146,34 @@
         </li>
       </ul>
     </li>
+
+
+
+     
+    <li class="menu-item  ">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-box"></i>
+        <div data-i18n=" المؤلفون ">المؤلفون</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item ">
+          <a href="/show_authors" class="menu-link">
+            <div data-i18n="عرض">عرض</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="/add_author" class="menu-link">
+            <div data-i18n="اضافة">اضافة</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="app-category-edit.html" class="menu-link">
+            <div data-i18n="تعديل">تعديل</div>
+          </a>
+        </li>
+      </ul>
+    </li>
+
   </ul>
   
   

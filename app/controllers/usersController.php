@@ -11,11 +11,7 @@ class UsersController extends Controller{
     }
 
 
-    //View users
-        public function show(){
-            $this->view('list_categories');
-
-    }
+    
  //View register view
         public function registerUser(){
             $this->view('register');
