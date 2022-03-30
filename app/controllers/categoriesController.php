@@ -28,17 +28,18 @@ function show(){
         $allCategories=$categories->getAll();
         //print_r($allCategories);
 
-        $this->view('list_categories',$allCategories);
+        $this->view('dashboard/list_categories',$allCategories);
 
     }
+//Dashbaord add category section
     function create(){
-        $this->view('add_category');
+        $this->view('dashboard/add_category');
 
     }
 
     function store(){
-        print_r($_POST);
-        print_r($_FILES);
+        // print_r($_POST);
+        // print_r($_FILES);
         $category=new Category();
         
         $category->name=$_POST['category_name'];
@@ -49,6 +50,8 @@ function show(){
         $category->is_active=$_POST['is_active'];
 
         $category->save();
+       
+
 
     }
     function edit(){

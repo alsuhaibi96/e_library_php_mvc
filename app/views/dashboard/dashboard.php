@@ -17,7 +17,7 @@
 =========================================================
  -->
 <!-- beautify ignore:start -->
-<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed " dir="ltr" data-theme="theme-semi-dark" data-assets-path="assets/" data-template="vertical-menu-template-semi-dark">
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed " dir="rtl" data-theme="theme-semi-dark" data-assets-path="assets/" data-template="vertical-menu-template-semi-dark">
 
   
 <!-- form-layouts-vertical.html , Sat, 26 Mar 2022 16:53:12 GMT -->

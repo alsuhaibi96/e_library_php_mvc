@@ -7,7 +7,7 @@ class UsersController extends Controller{
 
      //Adding a new user
     function newUser(){
-        $this->view('new_user');
+        $this->view('dashboard/new_user');
     }
 
 

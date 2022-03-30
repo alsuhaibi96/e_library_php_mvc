@@ -10,7 +10,7 @@ use coding\app\controllers\UsersController;
 use coding\app\controllers\DashboardController;
 use coding\app\controllers\HomeController;
 use coding\app\controllers\CartController;
-
+use coding\app\controllers\PaymentController;
 
 use Dotenv\Dotenv;
 
@@ -28,10 +28,13 @@ $system=new AppSystem($config);
 
 
 /** Show routes  */
+Router::get('/newUser',[UsersController::class,'newUser']);
 Router::get('/cart',[CartController::class,'show']);
 Router::get('/dashboard',[DashboardController::class,'show']);
 Router::get('/',[HomeController::class,'show']);
 Router::get('/categories',[CategoriesController::class,'show']);
+Router::get('/payment',[PaymentController::class,'show']);
+
 
 
 
