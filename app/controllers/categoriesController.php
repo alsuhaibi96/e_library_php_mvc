@@ -47,7 +47,7 @@ function show(){
 
         $category->image=$imageName!=null?$imageName:"default.png";
         $category->created_by=1;
-        $category->is_active=$_POST['is_active'];
+        $category->is_active=isset($_POST['is_active'])?1:0;
 
         $category->save();
        
