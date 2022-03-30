@@ -8,5 +8,10 @@ class AUthor extends Model{
 
         parent::$tblName="authors";
     }
+    function __set($name, $value)
+    {
+        $this->$name=$value;
+        
+    }
 }
 ?>
