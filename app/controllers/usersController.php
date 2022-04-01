@@ -17,16 +17,17 @@ class UsersController extends Controller{
             $this->view('register');
 
     }
+
+//save user data to databse
     public function saveUser(){
 
-        //print_r($_POST);
+      
         $user=new User();
         $user->name=$_POST['name'];
         $user->email=$_POST['email'];
         $user->password=md5($_POST['password']);
         $user->is_active=isset($_POST['is_active'])?1:0;
         $user->role_id=1;
-        $user->save();
         if($user->save())
         
         $this->view('feedback',['success'=>'data inserted successful']);
@@ -43,7 +44,25 @@ class UsersController extends Controller{
         
     }
 
+/**
+ * Show all publishers from the database
+ */
+function listAll(){
 
+    /**
+     * Create an instance form publisher model
+     */
+        $user =new User();
+        /**
+         * access the getAll function from the base model ,
+         * and fetch all the data from the specified table
+         */
+        $users=$user->getAll();
+        
+        /** now show the view with the exited data */
+        $this->view('dashboard/list_user',$users);    
+    
+    }
 
 
 }

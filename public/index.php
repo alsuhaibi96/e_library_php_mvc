@@ -51,8 +51,9 @@ Router::get('/add_book',[BooksController::class,'show']);
 Router::get('/list_books',[BooksController::class,'listAll']);
 Router::get('/categories_list',[CategoriesController::class,'listAll']);
 Router::get('/list_authors',[AuthorsController::class,'listAll']);
-Router::get('/list_authors',[AuthorsController::class,'listAll']);
 Router::get('/list_publisher',[PublishersController::class,'listAll']);
+Router::get('/list_user',[UsersController::class,'listAll']);
+
 
 
 
