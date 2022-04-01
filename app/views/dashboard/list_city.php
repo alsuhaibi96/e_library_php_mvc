@@ -262,7 +262,7 @@
 
 
 <div class="card"> 
-<a href="app-city-add.html" style ="width:120px;margin-left: auto;margin-top:10px;margin-right:10px"class="dt-button add-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" ><span><i class="bx bx-plus me-0 me-sm-2"></i><span class="d-none d-lg-inline-block">اضافة </span></span></a>
+<a href="add_city" style ="width:120px;margin-left: auto;margin-top:10px;margin-right:10px"class="dt-button add-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" ><span><i class="bx bx-plus me-0 me-sm-2"></i><span class="d-none d-lg-inline-block">اضافة </span></span></a>
 
   <h5 class="card-header">المدينة</h5> 
   <div class="table-responsive text-nowrap">

@@ -7,25 +7,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- =========================================================
 * Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
 ==============================================================
@@ -116,8 +97,8 @@
 
 
 <!-- Menu -->
+<?php include_once("aside.php")?>
 
-<?php require_once "aside.php"?>
 
 <!-- / Menu -->
 
@@ -612,13 +593,13 @@
       </div>
       <div class="card-body">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
-          <form action="" method="post" enctype="multipart/form-data">
+          <div class="col-lg-8 mx-auto"> 
+          <form action="save_city" method="POST" >
            
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label" for="Title">الاسم</label>
-                <input type="text" id="Title" class="form-control" placeholder="" />
+                <input type="text" id="Title"  name="name"class="form-control" placeholder=""  />
               </div>
               
             

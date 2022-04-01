@@ -197,7 +197,29 @@
     </li>
 
 
-
+    <li class="menu-item  ">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-map"></i>
+        <div data-i18n=" المدن ">المدن</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item ">
+          <a href="/list_city" class="menu-link">
+            <div data-i18n="عرض">عرض</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="/add_city" class="menu-link">
+            <div data-i18n="اضافة">اضافة</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="/edit_city" class="menu-link">
+            <div data-i18n="تعديل">تعديل</div>
+          </a>
+        </li>
+      </ul>
+    </li>
 
 
   </ul>
