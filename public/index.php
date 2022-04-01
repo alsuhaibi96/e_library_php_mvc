@@ -43,14 +43,15 @@ Router::get('/payment',[PaymentController::class,'show']);
  */
 
 /**
- * show dashboard views
+ * show dashboard views and list data
  */
 Router::get('/',[HomeController::class,'show']);
 Router::get('/dashboard',[DashboardController::class,'show']);
 Router::get('/add_book',[BooksController::class,'show']);
 Router::get('/list_books',[BooksController::class,'listAll']);
 Router::get('/categories_list',[CategoriesController::class,'listAll']);
-Router::get('/show_authors',[AuthorsController::class,'show']);
+Router::get('/list_authors',[AuthorsController::class,'listAll']);
+
 
 
 

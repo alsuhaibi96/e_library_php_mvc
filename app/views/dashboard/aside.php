@@ -157,7 +157,7 @@
       </a>
       <ul class="menu-sub">
         <li class="menu-item ">
-          <a href="/show_authors" class="menu-link">
+          <a href="/list_authors" class="menu-link">
             <div data-i18n="عرض">عرض</div>
           </a>
         </li>

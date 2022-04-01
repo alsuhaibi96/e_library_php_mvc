@@ -604,7 +604,7 @@
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="alt-num">الرقم</label>
-                <input name="phoneNumber" type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
+                <input dir="ltr" name="phoneNumber" type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="email">الايميل</label>

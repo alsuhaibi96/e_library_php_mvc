@@ -38,7 +38,7 @@
 =========================================================
  -->
 <!-- beautify ignore:start -->
-<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed " dir="ltr" data-theme="theme-semi-dark" data-assets-path="assets/" data-template="vertical-menu-template-semi-dark">
+<html lang="ar" class="light-style layout-navbar-fixed layout-menu-fixed " dir="rtl" data-theme="theme-semi-dark" data-assets-path="assets/" data-template="vertical-menu-template-semi-dark">
 
   
 <!-- app-user-list.html , Sat, 26 Mar 2022 16:51:13 GMT -->
@@ -262,7 +262,7 @@
 
 
 <div class="card"> 
-<a href="app-author-add.html" style ="width:120px;margin-left: auto;margin-top:10px;margin-right:10px"class="dt-button add-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" ><span><i class="bx bx-plus me-0 me-sm-2"></i><span class="d-none d-lg-inline-block">اضافة </span></span></a>
+<a href="/add_author" style ="width:120px;margin-left: auto;margin-top:10px;margin-right:10px"class="dt-button add-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" ><span><i class="bx bx-plus me-0 me-sm-2"></i><span class="d-none d-lg-inline-block">اضافة </span></span></a>
 
   <h5 class="card-header">المؤلفين</h5> 
   <div class="table-responsive text-nowrap">
@@ -277,20 +277,23 @@
         </tr>
       </thead>
       <tbody class="table-border-bottom-0">
+      <?php foreach($params as $author){ ?>
         <tr>
-          <td><ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+       
+          <td class="col-3"><ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Lilian Fuller">
              
-              <strong>شارلوك هولمز</strong>
+              <strong><?= $author['name']; ?></strong>
             </li>
            
           </ul> </td>
-          <td>  777888999</td>
+          <td dir="ltr"> <?= $author['phone']; ?></td>
           <td>
-        shark@gmail.com
-          </td>
+          <?= $author['email']; ?>
+        </td>
           <td>
-            شارلوك هولمز شارلوك  هولمز
+          <?= $author['bio']; ?>
+           
               </td>
           <td> <form action="" method="post"> <button type="submit "class="badge bg-label-success me-1 "  href="javascript:void(0);" style="border:none;"><i ></i> Active</button></form>
           <!-- <a  class="bx bx-trash me-1"></a> -->
@@ -300,8 +303,9 @@
 
            
           </td>
+         
         </tr>
-     
+        <?php }?>
       </tbody>
     </table>
   </div>

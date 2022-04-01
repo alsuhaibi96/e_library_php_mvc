@@ -23,16 +23,32 @@ class AuthorsController extends Controller{
     
 }
     
-    //View all list of authors
-    public function show(){
-        $this->view('dashboard/list_author');
-
-}
+ 
  //View authors
  public function show_author(){
     $this->view('dashboard/add_author');
 
 }
+
+/**
+ * Show all authors from the database
+ */
+function listAll(){
+
+    /**
+     * Create an instance form author model
+     */
+        $author =new AUthor();
+        /**
+         * access the getAll function from the base model ,
+         * and fetch all the data from the specified table
+         */
+        $authors=$author->getAll();
+        
+        /** now show the view with the exited data */
+        $this->view('dashboard/list_author',$authors);    
+    
+    }
 
 }
 ?>
