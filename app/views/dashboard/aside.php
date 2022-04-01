@@ -144,7 +144,29 @@
         </li>
       </ul>
     </li>
-    
+    <li class="menu-item  ">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-box"></i>
+        <div data-i18n=" العروض ">العروض</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item ">
+          <a href="/list_offer" class="menu-link">
+            <div data-i18n="عرض">عرض</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="/add_offer" class="menu-link">
+            <div data-i18n="اضافة">اضافة</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="app-book-edit.html" class="menu-link">
+            <div data-i18n="تعديل">تعديل</div>
+          </a>
+        </li>
+      </ul>
+    </li>
     <li class="menu-item  ">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-category"></i>

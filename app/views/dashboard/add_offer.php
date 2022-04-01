@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 
-
-
-
 <!-- =========================================================
 * Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
 ==============================================================
@@ -94,7 +91,7 @@
 
 <!-- Menu -->
 
-<?php require_once "aside.php"?>
+<?php include_once("aside.php")?>
 
 <!-- / Menu -->
 
@@ -590,26 +587,27 @@
       <div class="card-body">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-          <form action="" method="post" >
+          <form action="/save_offer" method="POST" >
            
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label" for="Title">العنوان</label>
-                <input type="text" id="Title" class="form-control" placeholder="" />
+                <input type="text" id="Title" name="name" class="form-control" placeholder="" />
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="alt-num">التخفيض</label>
-                <input type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
+                <input type="text" id="alt-num" name="discount" class="form-control phone-mask" placeholder="" />
               </div>
-              <div class="col-md-6">
-                <label class="form-label" for="alt-num">من</label>
-                <input type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
-              </div>
-              <div class="col-md-6">
-                <label class="form-label" for="alt-num">الى</label>
-                <input type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
-              </div>
-              <div class="col-md-6">
+              <div class="col-md-6 col-12 mb-4">
+              <label for="flatpickr-date" class="form-label">من</label>
+              <input type="date" name="from" class="form-control flatpickr-input active" placeholder="YYYY-MM-DD" id="flatpickr-date" >
+           </div>
+           <div class="col-md-6 col-12 mb-4">
+            <label for="flatpickr-date" class="form-label">الى</label>
+            <input type="date" name="to" class="form-control flatpickr-input active" placeholder="YYYY-MM-DD" id="flatpickr-date" >
+           </div>
+              
+              <!-- <div class="col-md-6">
                 <label class="form-label" for="state">الصنف</label>
                 <select id="state" class="select2 form-select" data-allow-clear="true">
                  
@@ -619,7 +617,7 @@
                 <label class="form-label" for="state">الكتاب</label>
                 <select id="state" class="select2 form-select" data-allow-clear="true">
                  
-                </select>
+                </select> -->
               </div>
               
            

@@ -13,6 +13,7 @@ use coding\app\controllers\HomeController;
 use coding\app\controllers\CartController;
 use coding\app\controllers\PaymentController;
 use coding\app\controllers\CitiesController;
+use coding\app\controllers\OffersController;
 
 
 
@@ -57,6 +58,8 @@ Router::get('/list_authors',[AuthorsController::class,'listAll']);
 Router::get('/list_publisher',[PublishersController::class,'listAll']);
 Router::get('/list_user',[UsersController::class,'listAll']);
 Router::get('/list_city',[CitiesController::class,'listAll']);
+Router::get('/list_offer',[OffersController::class,'listAll']);
+
 
 
 
@@ -72,6 +75,8 @@ Router::get('/add_author',[AuthorsController::class,'show_author']);
 Router::get('/add_category',[CategoriesController::class,'create']);
 Router::get('/add_publisher',[PublishersController::class,'show']);
 Router::get('/add_city',[CitiesController::class,'show']);
+Router::get('/add_offer',[OffersController::class,'show']);
+
 
 
 
@@ -86,6 +91,8 @@ Router::post('/save_category',[CategoriesController::class,'store']);
 Router::post('/save_publisher',[PublishersController::class,'store']);
 Router::post('/save_user',[UsersController::class,'saveUser']);
 Router::post('/save_city',[CitiesController::class,'store']);
+Router::post('/save_offer',[OffersController::class,'store']);
+
 
 
 /**
