@@ -5,27 +5,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- =========================================================
 * Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
 ==============================================================
@@ -38,15 +17,15 @@
 =========================================================
  -->
 <!-- beautify ignore:start -->
-<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed " dir="ltr" data-theme="theme-semi-dark" data-assets-path="""assets/" data-template="vertical-menu-template-semi-dark">
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed " dir="rtl" data-theme="theme-semi-dark" data-assets-path="assets/" data-template="vertical-menu-template-semi-dark">
 
   
-<!-- app-user-list.html , Sat, 26 Mar 2022 16:51:13 GMT -->
+<!-- form-layouts-vertical.html , Sat, 26 Mar 2022 16:53:12 GMT -->
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>User List - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title> Vertical Layouts - Forms | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
     
     <meta name="description" content="Most Powerful &amp; Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!" />
     <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5">
@@ -74,11 +53,8 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="assets/vendor/libs/typeahead-js/typeahead.css" />
-    <link rel="stylesheet" href="assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
-<link rel="stylesheet" href="assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
-<link rel="stylesheet" href="assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
+    <link rel="stylesheet" href="assets/vendor/libs/flatpickr/flatpickr.css" />
 <link rel="stylesheet" href="assets/vendor/libs/select2/select2.css" />
-<link rel="stylesheet" href="assets/vendor/libs/formvalidation/dist/css/formValidation.min.css" />
 
     <!-- Page CSS -->
     
@@ -115,8 +91,6 @@
 
     
     
-
-
 
 
 <!-- Menu -->
@@ -262,7 +236,7 @@
 
 
 <div class="card"> 
-<a href="app-publisher-add.html" style ="width:120px;margin-left: auto;margin-top:10px;margin-right:10px"class="dt-button add-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" ><span><i class="bx bx-plus me-0 me-sm-2"></i><span class="d-none d-lg-inline-block">اضافة </span></span></a>
+<a href="/add_publisher" style ="width:120px;margin-left: auto;margin-top:10px;margin-right:10px"class="dt-button add-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" ><span><i class="bx bx-plus me-0 me-sm-2"></i><span class="d-none d-lg-inline-block">اضافة </span></span></a>
 
   <h5 class="card-header">دور النشر </h5> 
   <div class="table-responsive text-nowrap">
@@ -276,41 +250,68 @@
           <th>الفاكس</th>
           <th>العنوان</th>
           <th> المدينة</th>
+          <th> الحالة</th>
+
           
         </tr>
       </thead>
       <tbody class="table-border-bottom-0">
+      <?php foreach($params as $publisher){ ?>
         <tr>
-          <td><ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Lilian Fuller">
-              <img src="assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+       
+          <td class="col-3"><ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+          <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Lilian Fuller">
+              <img src="images/<?= $publisher['image']; ?>" alt="Avatar" class="rounded-circle">
              
-              <strong>شارلوك </strong>
+              <strong><?= $publisher['name']; ?></strong>
             </li>
            
           </ul> </td>
-          <td>  777888999</td>
-          <td>  -</td>
-
+          <td dir="ltr"> <?= $publisher['phone']; ?></td>
           <td>
-        shark@gmail.com
-          </td>
-          <td>  -</td>
-
-          <td>
-            شارع الستين الغربي
+          <?= $publisher['alt_phone']; ?>
+        </td>
+        <td>
+          <?= $publisher['email']; ?>
+           
               </td>
-          <td>  صنعاء</td>
+          <td>
+          <?= $publisher['fax']; ?>
+           
+              </td>
+              <td>
+          <?= $publisher['address']; ?>
+           
+              </td>
+              <td>
+          <?= $publisher['country']; ?>
+           
+              </td>
+              <td>
+              <?php if($publisher['is_active']==1) {?>    
+            <span class="badge bg-label-success me-1">مفعل</span>
+            <?php }
+            else {?>
+             <span class="badge bg-label-danger me-1">موقف</span>
+             <?php } ?>
+              </td>
+            
+          <td> 
 
-          <td> <form action="" method="post"> <button type="submit "class="badge bg-label-success me-1 "  href="javascript:void(0);" style="border:none;"><i ></i> Active</button></form>
+        
+
+          </form>
           <!-- <a  class="bx bx-trash me-1"></a> -->
          </td>
           <td> 
-            <a href="app-publisher-edit.html" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> </a>
+            <a href="/edit_publisher" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> </a>
 
            
           </td>
+         
         </tr>
+        <?php }?>
+       
      
       </tbody>
     </table>

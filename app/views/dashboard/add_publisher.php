@@ -589,46 +589,46 @@
       <div class="card-body">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-          <form action="" method="post" >
+          <form action="/save_publisher" method="post" enctype="multipart/form-data" >
            
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label" for="Title">الاسم</label>
-                <input type="text" id="Title" class="form-control" placeholder="" />
+                <input name="name" type="text" id="Title" class="form-control" placeholder="" />
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="email">الصورة</label>
                 <div class="input-group input-group-merge">
-                  <input class="form-control" type="file" id=" " name="email" placeholder="john.doe" aria-label="john.doe" aria-describedby="email3" />
+                  <input class="form-control" type="file" id=" " name="image"  aria-label="john.doe" aria-describedby="email3" />
                   <span class="input-group-text" id="email3"> </span>
                 </div>
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="alt-num">الرقم</label>
-                <input type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
+                <input dir="ltr" name="phone" type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="alt-num">  الرقم الاضافي </label>
-                <input type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
+                <input dir="ltr" name="alt_phone" type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="email">الايميل</label>
                 <div class="input-group input-group-merge">
-                  <input class="form-control" type="email" id=" " name="email" placeholder="" aria-label="john.doe" aria-describedby="email3" />
+                  <input  class="form-control" type="email" id=" " name="email" placeholder="abdu@gmail.com" aria-label="john.doe" aria-describedby="email3" />
                   <span class="input-group-text" id="email3"> </span>
                 </div>
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="alt-num">  الفاكس </label>
-                <input type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
+                <input name="fax" type="text" id="alt-num" class="form-control" placeholder="" />
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="alt-num">العنوان</label>
-                <input type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
+                <input name="address" type="text" id="alt-num" class="form-control " placeholder="" />
               </div>
               <div class="col-md-6">
-                <label class="form-label" for="alt-num">المدينة</label>
-                <input type="text" id="alt-num" class="form-control phone-mask" placeholder="" />
+                <label class="form-label" for="alt-num">الدولة</label>
+                <input name="country" type="text" id="alt-num" class="form-control " placeholder="" />
               </div>
               
               
