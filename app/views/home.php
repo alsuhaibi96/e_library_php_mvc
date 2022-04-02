@@ -63,7 +63,7 @@
 
         <!-- Category   -->
 
-        <section>
+        <!-- <section>
             <header class="header">
                 <h1 class="header__title">تصفح حسب القسم</h1>
             </header>
@@ -103,7 +103,39 @@
                     <a><img src="../assets/images/icon/arrow.svg" class="category__arrow--next" alt="التالي"></a>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+
+
+
+
+
+        <!-- Category   -->
+
+         <section>
+            <header class="header">
+                <h1 class="header__title">تصفح حسب القسم</h1>
+            </header>
+            <div class="category">
+            <?php foreach($params as $category){
+                if($category['is_active']==1){
+                ?>
+        <article class="category__item">
+
+                    <img src="images/<?=$category['image'];?>" class="category__img" alt="<?=$category['image'];?>">
+                    <a href="" class="category__title category__title--brown"><?=$category['name'];?></a>
+                </article>
+                <?php }}?>
+          
+                <div class="category__next">
+                    <a><img src="../assets/images/icon/arrow.svg" class="category__arrow--next" alt="التالي"></a>
+                </div>
+            </div>
+        </section> 
+
+
+
+
 
     <!-- Advertisement  -->
     <section>

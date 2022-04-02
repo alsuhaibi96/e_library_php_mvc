@@ -48,8 +48,13 @@ function show(){
         $category->image=$imageName!=null?$imageName:"default.png";
         $category->created_by=1;
         $category->is_active=isset($_POST['is_active'])?1:0;
+        if ($category->save()){
 
-        $category->save();
+            $this->view('feedback',['success'=>'data inserted successful']);
+           }
+            else 
+            $this->view('feedback',['danger'=>'can not add data']);
+    
        
 
 

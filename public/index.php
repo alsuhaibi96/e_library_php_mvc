@@ -50,6 +50,7 @@ Router::get('/payment',[PaymentController::class,'show']);
  * show dashboard views and list data
  */
 Router::get('/',[HomeController::class,'show']);
+Router::get('/',[HomeController::class,'listAll']);
 Router::get('/dashboard',[DashboardController::class,'show']);
 Router::get('/add_book',[BooksController::class,'show']);
 Router::get('/list_books',[BooksController::class,'listAll']);
