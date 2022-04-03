@@ -299,7 +299,7 @@
           <!-- <a  class="bx bx-trash me-1"></a> -->
          </td>
           <td> 
-            <a href="app-user-edit.html" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> </a>
+            <a href="edit_author/<?php echo $author['id'];?>" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> </a>
 
            
           </td>

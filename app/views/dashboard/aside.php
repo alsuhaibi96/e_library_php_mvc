@@ -90,7 +90,7 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="app-category-edit.html" class="menu-link">
+          <a href="/edit_author" class="menu-link">
             <div data-i18n="تعديل">تعديل</div>
           </a>
         </li>
@@ -184,7 +184,7 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="app-category-edit.html" class="menu-link">
+          <a href="/edit_category" class="menu-link">
             <div data-i18n="تعديل">تعديل</div>
           </a>
         </li>

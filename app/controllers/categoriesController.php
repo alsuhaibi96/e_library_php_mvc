@@ -59,11 +59,39 @@ function show(){
 
 
     }
-    function edit(){
+
+     //edit method
+    function edit($params=[]){
+
+        $cat=new Category();
+        $result=$cat->getSingleRow($params['id']);
+        $this->view('dashboard/edit_category',$result);
         
 
     }
+
+    //update categories
     function update(){
+
+        $cat = new Category();
+        $name = $_POST['category_name'];
+        $imageName=$this->uploadFile($_FILES['image']);
+        $image=$imageName!=null?$imageName:"default.png";
+        $stmt = $author->update('categories', [
+            'name'      => $name,
+            'phone'     => $phone,
+            'email'     => $email,
+            'bio'       => $bio
+        ])->where('id', $id)->exec();
+        if($stmt){ ?>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <?php 
+            echo "<div class='container mt-6'>";
+                $mes = "<div class='alert alert-success'>Updated successfully</div>";
+                $this->redirectHome($mes, 'dashboard/list_cateories', 10); 
+            echo "</div>";
+        }
+        $this->view('dashboard/list_cateories');
 
     }
     public function remove(){

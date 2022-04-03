@@ -2,8 +2,10 @@
 namespace coding\app\controllers;
 
 use coding\app\models\AUthor;
+use coding\app\models\Model;
 
-class AuthorsController extends Controller{
+
+    class AuthorsController extends Controller{
 
     public function store(){
         $author=new AUthor();
@@ -50,5 +52,34 @@ function listAll(){
     
     }
 
+// showing the author by its id 
+    function showAuthorById($params=[]){
+        $authors = new AUthor();
+        $rows = $authors->getSingleRow($params['id']);
+        $this->view('edit_author', $rows);
+    }
+
+    //updating the author
+    function updateAuthor(){
+        $author = new Model();
+        $id = $_POST['authorid'];
+        $name = $_POST['author_name'];
+        $phone = $_POST['phone'];
+        $email = $_POST['email'];
+        $bio = $_POST['bio'];
+        $stmt = $author->update('authors', [
+            'name'      => $name,
+            'phone'     => $phone,
+            'email'     => $email,
+            'bio'       => $bio
+        ])->where('id', $id)->exec();
+        if($stmt){ 
+          
+           
+                $this->view('feedback',['success'=>'تم تعديل البيانات بنجاح']);
+         
+        }
+        $this->view('dashboard/list_author');
+    }
 }
 ?>

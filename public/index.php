@@ -100,7 +100,12 @@ Router::post('/save_offer',[OffersController::class,'store']);
  * Update
  * 
  */
-Router::post('/update_category',[CategoriesController::class,'update']);
+Router::get('/edit_category/{id}',[CategoriesController::class,'edit']);
+Router::get('/edit_author/{id}',[AuthorsController::class,'showAuthorById']);
+Router::post('/update_author',[AuthorsController::class,'updateAuthor']);
+
+
+
 
 /** end of web routes */
 

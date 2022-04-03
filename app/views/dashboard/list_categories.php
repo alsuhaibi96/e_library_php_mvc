@@ -599,7 +599,6 @@
         </thead>
         <tbody>
        
-         
          <?php foreach($params as $category){?>
           <tr>
             
