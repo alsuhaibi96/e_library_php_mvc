@@ -85,7 +85,7 @@ class Model{
 		$this->resetQuery();
 		$set ='';
 		$x = 1;
-		foreach ($fields as $column => $field) {
+	foreach ($fields as $column => $field) {
 			$set .= "`$column` = ?";
 			$this->bindValues[] = $field;
 			if ( $x < count($fields) ) {
@@ -101,6 +101,11 @@ class Model{
 		$this->sql = "DELETE FROM `{$table_name}`";
 		return $this;
 	}
+	function deleteSingle($table_name,$id)
+    {
+        $rows = $this->delete($table_name)->where("id", $id)->exec();
+        return $rows;   
+    }
 	public function insert( $table_name, $fields = [] ){
 		$this->resetQuery();
 
@@ -136,6 +141,8 @@ class Model{
         $this->join = " JOIN  $table_name  ON  $FK  =  $PK";
         return $this;
     }
+
+	
 	public function where(){
 		if ($this->whereCount == 0) {
 			$this->where .= " WHERE ";

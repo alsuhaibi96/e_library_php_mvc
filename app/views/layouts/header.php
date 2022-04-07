@@ -70,7 +70,7 @@
                 <div class="serach-cart-container">
                 <i class="fa fa-bars " id="mobile_nav" onclick="toggleMenu()"></i>
                     <div class="logo">
-                        <a href="index.html"><img src="assets/images/home - Copy.png" alt="BookStore"></a>
+                        <a href="/"><img src="assets/images/home - Copy.png" alt="BookStore"></a>
                     </div>
                 
                     <form action="">
@@ -81,7 +81,7 @@
                     </form>  
                     
                     <div class="cart">
-                        <a href="cart.html"><img src="assets/images/icon/cart-1.svg" class="cart__icon" alt="السلّة"></a>
+                        <a href="/cart"><img src="assets/images/icon/cart-1.svg" class="cart__icon" alt="السلّة"></a>
                         <span class="notfication" id="cart"></span>
                     </div>
                 

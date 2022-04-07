@@ -105,7 +105,19 @@ Router::get('/edit_author/{id}',[AuthorsController::class,'showAuthorById']);
 Router::post('/update_author',[AuthorsController::class,'updateAuthor']);
 
 
+/**
+ * Delete routes
+ * 
+ */
+Router::get('/delete_author/{id}',[AuthorsController::class,'deleteAuthor']);
 
+
+/**
+ * Soft delete
+ * 
+ */
+// Router::get('/isActive_author/{id}',[AuthorsController::class,'isActiveAuthor']);
+// Router::get('/noActive_author/{id}',[AuthorsController::class,'noActiveAuthor']);
 
 /** end of web routes */
 

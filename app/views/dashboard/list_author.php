@@ -273,6 +273,10 @@
           <th>الرقم</th>
           <th>الايميل</th>
           <th> النبذة</th>
+          <th>  تعديل</th>
+          <th>  حذف نهائي</th>
+
+
           
         </tr>
       </thead>
@@ -295,11 +299,16 @@
           <?= $author['bio']; ?>
            
               </td>
-          <td> <form action="" method="post"> <button type="submit "class="badge bg-label-success me-1 "  href="javascript:void(0);" style="border:none;"><i ></i> Active</button></form>
           <!-- <a  class="bx bx-trash me-1"></a> -->
          </td>
+     
           <td> 
             <a href="edit_author/<?php echo $author['id'];?>" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> </a>
+
+           
+          </td>
+          <td> 
+            <a href="delete_author/<?php echo $author['id'];?>" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> </a>
 
            
           </td>
@@ -410,6 +419,13 @@
   
 </body>
 
-
+<!-- <td>
+              <?php if($author['is_active']==1) {?>    
+              <a href="noActive_author/<?php echo $author['id']?>" class="badge bg-label-success me-1">مفعل</a>
+              <?php }
+              else {?>
+              <a href="isActive_author/<?php echo $author['id']?>" class="badge bg-label-danger me-1">موقف</a>
+              <?php } ?>
+            </td> -->
 <!-- app-user-list.html , Sat, 26 Mar 2022 16:51:16 GMT -->
 </html>

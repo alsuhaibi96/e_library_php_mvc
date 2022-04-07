@@ -58,6 +58,22 @@ function listAll(){
         $rows = $authors->getSingleRow($params['id']);
         $this->view('edit_author', $rows);
     }
+ 
+    //make 
+
+    function deleteAuthor($id=[]){
+        $author = new Model();
+        $stmt = $author->deleteSingle('authors',$id['id']);
+        if($stmt){ 
+          
+           
+            $this->view('feedback',['success'=>'تم حذف البيانات نهائياََ']);
+     
+    }
+    $this->view('dashboard/list_author');
+    }
+  
+
 
     //updating the author
     function updateAuthor(){
@@ -81,5 +97,29 @@ function listAll(){
         }
         $this->view('dashboard/list_author');
     }
+
+
+      // function isActiveAuthor($isActiv=[]){
+    //     $author = new Model();
+    //     $stmt = $author->update('authors', ['is_active' => 1])->where($isActiv['id'])->exec();
+    //     if($stmt){ 
+          
+            
+    //         $this->view('feedback',['success'=>'تم تعديل البيانات بنجاح']);
+     
+    // }
+    // $this->view('dashboard/list_author');
+    // }
+    // function noActiveAuthor($noActiv=[]){
+    //     $author = new Model();
+    //     $stmt = $author->update('authors', ['is_active' => 0])->where($noActiv['id'])->exec();
+    //     if($stmt){ 
+          
+           
+    //         $this->view('feedback',['success'=>'تم حذف البيانات بنجاح']);
+     
+    // }
+    // $this->view('dashboard/list_author');
+    // }
 }
 ?>
